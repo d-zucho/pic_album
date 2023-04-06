@@ -1,10 +1,16 @@
+import { SearchBar } from './components/SearchBar'
+
 import './App.css'
 import { useState } from 'react'
 
 function App() {
+  const handleSubmit = (term) => {
+    console.log('Do a search with ', term)
+  }
+
   return (
     <div className='App'>
-      <h1>APP</h1>
+      <SearchBar onSubmit={handleSubmit} />
     </div>
   )
 }
